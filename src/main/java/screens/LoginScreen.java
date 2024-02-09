@@ -7,7 +7,6 @@ import models.User;
 import org.openqa.selenium.By;
 
 @Getter
-@AllArgsConstructor()
 public class LoginScreen {
     private AppiumDriver appiumDriver;
 
@@ -15,11 +14,14 @@ public class LoginScreen {
         this.appiumDriver = appiumDriver;
     }
 
-    private By userNameTextField = By.id("");
-    private String passwordTextField;
-    private String loginButton = "";
+    By userNameTextField = By.id("test-Username");
+    By passwordTextField = By.id("test-Password");
+    By loginButton = By.id("test-LOGIN");
 
     public HomeScreen login(User user) {
+        appiumDriver.findElement(userNameTextField).sendKeys(user.getUserName());
+        appiumDriver.findElement(passwordTextField).sendKeys(user.getPassword());
+        appiumDriver.findElement(loginButton).click();
         return new HomeScreen(appiumDriver);
     }
 }

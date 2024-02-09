@@ -11,9 +11,15 @@ repositories {
 
 dependencies {
     testImplementation 'org.testng:testng:7.9.0'
-    implementation 'io.appium:java-client:9.0.0'
-    compileOnly 'org.projectlombok:lombok:1.18.30'
-    implementation 'org.seleniumhq.selenium:selenium-java:4.16.1'
+    implementation 'io.appium:java-client:8.0.0'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.11.0'
+
+    // lombok
+    implementation 'org.projectlombok:lombok:1.18.30'
+    testImplementation 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+
 
 
 }

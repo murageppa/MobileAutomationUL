@@ -2,6 +2,7 @@ package org.swagLabs;
 
 import io.appium.java_client.AppiumDriver;
 import models.User;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import screens.HomeScreen;
